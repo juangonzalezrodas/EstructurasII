@@ -2,7 +2,7 @@ import { Navigate } from 'react-router-dom';
 import { useUserRole } from '../../hooks/useUserRole';
 import LoadingSpinner from '../common/LoadingSpinner';
 import PropTypes from 'prop-types';
-import styles from './AdminRoute.module.css';
+import styles from './AdminRoute.scss';
 
 const AdminRoute = ({ children }) => {
     const { isAdmin, loading } = useUserRole();
