@@ -24,7 +24,7 @@ const Header = () => {
     <header className={styles.header}>
         <div className={styles.container}>
         <Link to="/" className={styles.logo}>
-            <h1>Nexo</h1>
+            <h1>Relink</h1>
             <span className={styles.tagline}>Encuentra buscando menos</span>
         </Link>
 
