@@ -1,0 +1,61 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+    
+    // Funciones auxiliares
+    function isSignedIn() {
+      return request.auth != null;
+    }
+    
+    function isOwner(userId) {
+      return request.auth.uid == userId;
+    }
+    
+    // Reglas para usuarios
+    match /users/{userId} {
+      allow read: if isSignedIn();
+      allow create: if isSignedIn();
+      allow update, delete: if isOwner(userId);
+    }
+    
+    // Reglas para objetos
+    match /objects/{objectId} {
+      allow read: if isSignedIn();
+      allow create: if isSignedIn();
+      allow update: if isSignedIn();
+      allow delete: if false; // No permitir eliminación
+    }
+    
+    // Reglas para tickets
+    match /tickets/{ticketId} {
+      allow read: if isSignedIn();
+      allow create: if isSignedIn();
+      allow update: if isSignedIn() && 
+                      (isOwner(resource.data.userId) || 
+                       request.auth.token.role in ['admin', 'security']);
+      allow delete: if isOwner(resource.data.userId);
+    }
+    
+    // Reglas para coincidencias
+    match /matches/{matchId} {
+      allow read: if isSignedIn();
+      allow create: if isSignedIn();
+      allow update, delete: if request.auth.token.role in ['admin', 'security'];
+    }
+    
+    // Reglas para notificaciones
+    match /notifications/{notificationId} {
+      allow read: if isSignedIn() && isOwner(resource.data.userId);
+      allow create: if isSignedIn();
+      allow update: if isOwner(resource.data.userId);
+      allow delete: if isOwner(resource.data.userId);
+    }
+    
+    // Reglas para entregas
+    match /deliveries/{deliveryId} {
+      allow read: if isSignedIn();
+      allow create: if isSignedIn();
+      allow update, delete: if request.auth.token.role in ['admin', 'security'];
+    }
+  }
+}
