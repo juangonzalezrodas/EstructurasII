@@ -13,7 +13,7 @@ const Home = () => {
         <div className={styles.homePage}>
         <div className={styles.hero}>
             <div className="container">
-            <h1 className={styles.heroTitle}>Nexo</h1>
+            <h1 className={styles.heroTitle}>Relink</h1>
             <p className={styles.heroTagline}>Encuentra buscando menos</p>
             <p className={styles.heroDescription}>
                 Sistema inteligente de gestión de objetos perdidos para la Universidad Autónoma de Occidente

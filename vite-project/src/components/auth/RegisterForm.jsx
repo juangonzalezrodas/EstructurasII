@@ -93,7 +93,7 @@ const RegisterForm = () => {
     <div className={styles.container}>
         <div className={styles.formCard}>
         <h2>Crear Cuenta</h2>
-        <p className={styles.subtitle}>Únete al sistema Nexo UAO</p>
+        <p className={styles.subtitle}>Únete al sistema Relink</p>
         
         <form onSubmit={handleSubmit} className={styles.form}>
             <div className={styles.formGroup}>
