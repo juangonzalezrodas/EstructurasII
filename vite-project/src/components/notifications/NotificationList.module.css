@@ -1,0 +1,150 @@
+.notificationContainer {
+    position: relative;
+}
+
+.notificationButton {
+    position: relative;
+    background: transparent;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+    padding: var(--spacing-sm);
+    border-radius: 50%;
+    transition: background-color var(--transition-fast);
+}
+
+.notificationButton:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.badge {
+    position: absolute;
+    top: 0;
+    right: 0;
+    background-color: var(--error-color);
+    color: white;
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: var(--font-size-xs);
+    font-weight: 700;
+}
+
+.notificationDropdown {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    margin-top: var(--spacing-sm);
+    width: 400px;
+    max-height: 500px;
+    background: white;
+    border-radius: var(--border-radius-lg);
+    box-shadow: var(--shadow-xl);
+    z-index: 1000;
+    overflow: hidden;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: var(--spacing-md) var(--spacing-lg);
+    border-bottom: 1px solid var(--gray-200);
+    background-color: var(--gray-50);
+}
+
+.header h3 {
+    color: var(--primary-color);
+    margin: 0;
+    font-size: var(--font-size-lg);
+}
+
+.markAllButton {
+    background: transparent;
+    border: none;
+    color: var(--primary-color);
+    font-size: var(--font-size-xs);
+    cursor: pointer;
+    font-weight: 600;
+    padding: var(--spacing-xs) var(--spacing-sm);
+    border-radius: var(--border-radius-sm);
+    transition: background-color var(--transition-fast);
+}
+
+.markAllButton:hover {
+    background-color: var(--gray-200);
+}
+
+.notificationList {
+    max-height: 400px;
+    overflow-y: auto;
+}
+
+.notificationItem {
+    display: flex;
+    padding: var(--spacing-md) var(--spacing-lg);
+    border-bottom: 1px solid var(--gray-100);
+    cursor: pointer;
+    transition: background-color var(--transition-fast);
+    position: relative;
+}
+
+.notificationItem:hover {
+    background-color: var(--gray-50);
+}
+
+.notificationItem.unread {
+    background-color: #e3f2fd;
+}
+
+.notificationContent {
+    flex: 1;
+}
+
+.notificationTitle {
+    color: var(--gray-900);
+    font-size: var(--font-size-sm);
+    font-weight: 600;
+    margin-bottom: var(--spacing-xs);
+}
+
+.notificationMessage {
+    color: var(--gray-600);
+    font-size: var(--font-size-xs);
+    margin-bottom: var(--spacing-xs);
+    line-height: 1.4;
+}
+
+.notificationTime {
+    color: var(--gray-500);
+    font-size: var(--font-size-xs);
+}
+
+.unreadDot {
+    width: 8px;
+    height: 8px;
+    background-color: var(--info-color);
+    border-radius: 50%;
+    margin-left: var(--spacing-sm);
+    flex-shrink: 0;
+}
+
+.loading,
+.empty {
+    text-align: center;
+    padding: var(--spacing-xl);
+    color: var(--gray-500);
+    font-size: var(--font-size-sm);
+}
+
+@media (max-width: 768px) {
+    .notificationDropdown {
+    width: 90vw;
+    right: -45vw;
+    left: auto;
+    transform: translateX(50%);
+    }
+}

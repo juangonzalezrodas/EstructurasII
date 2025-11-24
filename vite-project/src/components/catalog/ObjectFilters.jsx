@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { OBJECT_CATEGORIES, COLORS, CAMPUS_LOCATIONS, OBJECT_STATUS } from '../../utils/constants';
-import styles from './ObjectFilters.scss';
+import styles from './ObjectFilters.module.css';
 import PropTypes from 'prop-types';
 
 const ObjectFilters = ({ onFilterChange, onClearFilters }) => {

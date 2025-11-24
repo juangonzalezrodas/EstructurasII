@@ -2,7 +2,7 @@ import { useAuth } from '../../hooks/useAuth';
 import { useUserRole } from '../../hooks/useUserRole';
 import { useNavigate, Link } from 'react-router-dom';
 import { toast } from 'react-toastify';
-import styles from './Header.scss';
+import styles from './Header.module.css';
 
 const Header = () => {
     const { currentUser, logout } = useAuth();
@@ -24,7 +24,7 @@ const Header = () => {
     <header className={styles.header}>
         <div className={styles.container}>
         <Link to="/" className={styles.logo}>
-            <h1>Relink</h1>
+            <h1>Nexo</h1>
             <span className={styles.tagline}>Encuentra buscando menos</span>
         </Link>
 

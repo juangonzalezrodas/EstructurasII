@@ -1,0 +1,197 @@
+.homePage {
+    min-height: 100vh;
+}
+
+.hero {
+    background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+    color: white;
+    padding: var(--spacing-2xl) 0;
+    text-align: center;
+    min-height: 60vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.heroTitle {
+    font-size: 4rem;
+    font-weight: 700;
+    margin-bottom: var(--spacing-md);
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.adminButton {
+    padding: var(--spacing-md) var(--spacing-2xl);
+    background-color: var(--secondary-color);
+    color: white;
+    border: none;
+    border-radius: var(--border-radius-md);
+    font-size: var(--font-size-lg);
+    font-weight: 600;
+    cursor: pointer;
+    transition: all var(--transition-fast);
+}
+
+.adminButton:hover {
+    background-color: #ff8533;
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-md);
+}
+
+.heroTagline {
+    font-size: var(--font-size-2xl);
+    margin-bottom: var(--spacing-lg);
+    opacity: 0.95;
+}
+
+.heroDescription {
+    font-size: var(--font-size-lg);
+    max-width: 600px;
+    margin: 0 auto var(--spacing-2xl);
+    opacity: 0.9;
+    line-height: 1.6;
+}
+
+.heroActions {
+    display: flex;
+    gap: var(--spacing-lg);
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.primaryButton {
+    padding: var(--spacing-md) var(--spacing-2xl);
+    background-color: white;
+    color: var(--primary-color);
+    border: none;
+    border-radius: var(--border-radius-md);
+    font-size: var(--font-size-lg);
+    font-weight: 600;
+    cursor: pointer;
+    transition: all var(--transition-fast);
+    box-shadow: var(--shadow-lg);
+}
+
+.primaryButton:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-xl);
+}
+
+.secondaryButton {
+    padding: var(--spacing-md) var(--spacing-2xl);
+    background-color: transparent;
+    color: white;
+    border: 2px solid white;
+    border-radius: var(--border-radius-md);
+    font-size: var(--font-size-lg);
+    font-weight: 600;
+    cursor: pointer;
+    transition: all var(--transition-fast);
+}
+
+.secondaryButton:hover {
+    background-color: white;
+    color: var(--primary-color);
+}
+
+.features {
+    padding: var(--spacing-2xl) 0;
+    background-color: white;
+}
+
+.featuresTitle {
+    text-align: center;
+    color: var(--primary-color);
+    margin-bottom: var(--spacing-2xl);
+    font-size: var(--font-size-3xl);
+}
+
+.featuresGrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: var(--spacing-xl);
+}
+
+.featureCard {
+    text-align: center;
+    padding: var(--spacing-xl);
+    background-color: var(--gray-50);
+    border-radius: var(--border-radius-lg);
+    transition: all var(--transition-normal);
+}
+
+.featureCard:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-lg);
+}
+
+.featureIcon {
+    font-size: 3rem;
+    margin-bottom: var(--spacing-md);
+}
+
+.featureCard h3 {
+    color: var(--primary-color);
+    margin-bottom: var(--spacing-sm);
+    font-size: var(--font-size-xl);
+}
+
+.featureCard p {
+    color: var(--gray-600);
+    line-height: 1.6;
+}
+
+.cta {
+    background: linear-gradient(135deg, var(--secondary-color) 0%, var(--primary-color) 100%);
+    color: white;
+    padding: var(--spacing-2xl) 0;
+    text-align: center;
+}
+
+.cta h2 {
+    font-size: var(--font-size-3xl);
+    margin-bottom: var(--spacing-md);
+}
+
+.cta p {
+    font-size: var(--font-size-lg);
+    margin-bottom: var(--spacing-xl);
+    opacity: 0.9;
+}
+
+.ctaButton {
+    padding: var(--spacing-md) var(--spacing-2xl);
+    background-color: white;
+    color: var(--primary-color);
+    border: none;
+    border-radius: var(--border-radius-md);
+    font-size: var(--font-size-lg);
+    font-weight: 600;
+    cursor: pointer;
+    transition: all var(--transition-fast);
+    box-shadow: var(--shadow-lg);
+}
+
+.ctaButton:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-xl);
+}
+
+@media (max-width: 768px) {
+    .heroTitle {
+    font-size: 2.5rem;
+    }
+  
+    .heroTagline {
+    font-size: var(--font-size-xl);
+    }
+  
+    .heroDescription {
+    font-size: var(--font-size-base);
+    }
+
+    .featuresGrid {
+    grid-template-columns: 1fr;
+    }
+}

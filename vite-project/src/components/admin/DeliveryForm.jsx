@@ -5,7 +5,7 @@ import { updateTicketStatus } from '../../services/ticketService';
 import { useAuth } from '../../hooks/useAuth';
 import { toast } from 'react-toastify';
 import { isValidIdNumber, isNotEmpty } from '../../utils/validators';
-import styles from './DeliveryForm.scss';
+import styles from './DeliveryForm.module.css';
 import PropTypes from 'prop-types';
 
 const DeliveryForm = ({ object, onSuccess, onCancel }) => {

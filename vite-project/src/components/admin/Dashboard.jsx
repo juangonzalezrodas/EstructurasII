@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react';
 import { getAllObjects } from '../../services/objectService';
 import { getAllTickets } from '../../services/ticketService';
 import { OBJECT_STATUS, TICKET_STATUS } from '../../utils/constants';
-import styles from './Dashboard.scss';
+import styles from './Dashboard.module.css';
 
 const Dashboard = () => {
     const [stats, setStats] = useState({

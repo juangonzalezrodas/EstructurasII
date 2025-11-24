@@ -4,7 +4,7 @@ import { createUserProfile } from '../../services/authService';
 import { useNavigate } from 'react-router-dom';
 import { toast } from 'react-toastify';
 import { isValidEmail, isValidIdNumber, isValidPassword, isNotEmpty } from '../../utils/validators';
-import styles from './RegisterForm.scss';
+import styles from './RegisterForm.module.css';
 
 const RegisterForm = () => {
     const [formData, setFormData] = useState({
@@ -93,7 +93,7 @@ const RegisterForm = () => {
     <div className={styles.container}>
         <div className={styles.formCard}>
         <h2>Crear Cuenta</h2>
-        <p className={styles.subtitle}>Únete al sistema Relink</p>
+        <p className={styles.subtitle}>Únete al sistema Nexo UAO</p>
         
         <form onSubmit={handleSubmit} className={styles.form}>
             <div className={styles.formGroup}>

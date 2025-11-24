@@ -1,4 +1,4 @@
-import styles from './LoadingSpinner.scss';
+import styles from './LoadingSpinner.module.css';
 import PropTypes from 'prop-types';
 
 const LoadingSpinner = ({ message = 'Cargando...' }) => {

@@ -4,7 +4,7 @@ import { formatDate, getStatusText } from '../../utils/helpers';
 import { OBJECT_CATEGORIES, COLORS, CAMPUS_LOCATIONS, STORAGE_LOCATIONS } from '../../utils/constants';
 import LoadingSpinner from '../common/LoadingSpinner';
 import DeliveryForm from '../admin/DeliveryForm';
-import styles from './ObjectDetails.scss';
+import styles from './ObjectDetails.module.css';
 import PropTypes from 'prop-types';
 
 const ObjectDetails = ({ objectId, onClose }) => {

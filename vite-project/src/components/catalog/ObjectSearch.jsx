@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import styles from './ObjectSearch.scss';
+import styles from './ObjectSearch.module.css';
 import PropTypes from 'prop-types';
 
 const ObjectSearch = ({ onSearch }) => {

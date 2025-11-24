@@ -1,6 +1,6 @@
 import { formatDate, getStatusText, truncateText } from '../../utils/helpers';
 import { OBJECT_CATEGORIES, COLORS, CAMPUS_LOCATIONS } from '../../utils/constants';
-import styles from './ObjectCard.scss';
+import styles from './ObjectCard.module.css';
 import PropTypes from 'prop-types';
 
 const ObjectCard = ({ object, onClick }) => {

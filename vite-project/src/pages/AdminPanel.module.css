@@ -1,0 +1,156 @@
+.adminPage {
+    min-height: 100vh;
+    padding: var(--spacing-xl) 0;
+    background-color: var(--gray-50);
+}
+
+.header {
+    text-align: center;
+    margin-bottom: var(--spacing-2xl);
+}
+
+.header h1 {
+    color: var(--primary-color);
+    margin-bottom: var(--spacing-xs);
+}
+
+.subtitle {
+    color: var(--gray-600);
+    font-size: var(--font-size-lg);
+}
+
+.tabs {
+    display: flex;
+    gap: var(--spacing-sm);
+    margin-bottom: var(--spacing-xl);
+    background: white;
+    padding: var(--spacing-sm);
+    border-radius: var(--border-radius-lg);
+    box-shadow: var(--shadow-sm);
+}
+
+.tab {
+    flex: 1;
+    padding: var(--spacing-md) var(--spacing-lg);
+    background: transparent;
+    border: none;
+    border-radius: var(--border-radius-md);
+    font-weight: 600;
+    font-size: var(--font-size-base);
+    color: var(--gray-600);
+    cursor: pointer;
+    transition: all var(--transition-fast);
+}
+
+.tab:hover {
+    background-color: var(--gray-100);
+    color: var(--primary-color);
+}
+
+.activeTab {
+    background-color: var(--primary-color) !important;
+    color: white !important;
+}
+
+.content {
+    min-height: 400px;
+}
+
+.objectsHeader {
+    margin-bottom: var(--spacing-lg);
+}
+
+.objectsCount {
+    color: var(--gray-600);
+    font-weight: 500;
+}
+
+.objectsGrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: var(--spacing-xl);
+}
+
+.emptyState {
+    text-align: center;
+    padding: var(--spacing-2xl);
+    background: white;
+    border-radius: var(--border-radius-lg);
+    box-shadow: var(--shadow-md);
+}
+
+.emptyIcon {
+    font-size: 5rem;
+    margin-bottom: var(--spacing-lg);
+}
+
+.emptyState h2 {
+    color: var(--primary-color);
+    margin-bottom: var(--spacing-sm);
+}
+
+.emptyState p {
+    color: var(--gray-600);
+    margin-bottom: var(--spacing-xl);
+    font-size: var(--font-size-lg);
+}
+
+.registerButton {
+    padding: var(--spacing-md) var(--spacing-2xl);
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    border-radius: var(--border-radius-md);
+    font-weight: 600;
+    font-size: var(--font-size-lg);
+    cursor: pointer;
+    transition: all var(--transition-fast);
+}
+
+.registerButton:hover {
+    background-color: var(--secondary-color);
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-md--);
+}
+
+.error {
+    text-align: center;
+    padding: var(--spacing-2xl);
+    background: white;
+    border-radius: var(--border-radius-lg);
+    box-shadow: var(--shadow-md);
+}
+
+.error p {
+    color: var(--error-color);
+    margin-bottom: var(--spacing-lg);
+}
+
+.retryButton {
+    padding: var(--spacing-md) var(--spacing-xl);
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    border-radius: var(--border-radius-md);
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color var(--transition-fast);
+}
+
+.retryButton:hover {
+    background-color: var(--secondary-color);
+}
+
+@media (max-width: 768px) {
+    .tabs {
+    flex-direction: column;
+    }
+  
+    .tab {
+    width: 100%;
+    }
+  
+    .objectsGrid {
+    grid-template-columns: 1fr;
+    }
+}

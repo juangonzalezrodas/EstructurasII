@@ -4,7 +4,7 @@ import { useAuth } from '../../hooks/useAuth';
 import { toast } from 'react-toastify';
 import { OBJECT_CATEGORIES, COLORS, CAMPUS_LOCATIONS, STORAGE_LOCATIONS } from '../../utils/constants';
 import { isNotEmpty, isValidPastDate, isValidImageFile } from '../../utils/validators';
-import styles from './ObjectRegistrationForm.scss';
+import styles from './ObjectRegistrationForm.module.css';
 import PropTypes from 'prop-types';
 
 const ObjectRegistrationForm = ({ onSuccess, onCancel }) => {
